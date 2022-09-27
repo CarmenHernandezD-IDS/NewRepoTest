@@ -25,4 +25,4 @@ jobs:
         pylint . --recursive=y
     - name: Doing test
       run: |
-        python test_cliente_controller.py install
+        python '.\test\Controller\test_cliente_controller.py'
