@@ -25,5 +25,5 @@ jobs:
         pylint . --recursive=y
     - name: Doing test
       run: |
-        python NewRepoTest-main/test/controller/test_cliente_controller.py
-        python test/service/test_cliente_service.py
+        python 'NewRepoTest-main/test/controller/test_cliente_controller.py'
+        python 'test/service/test_cliente_service.py'
