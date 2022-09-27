@@ -49,7 +49,7 @@ class ListarClientes(Resource):
         return jsonify(list_clients())
 
 
-@api.route('/clients/<id>/')
+@api.route('/clients/<_id>/')
 @api.doc(descripton="Busca a un cliente por medio de su ID")
 class ClienteById(Resource):
     """
@@ -63,7 +63,7 @@ class ClienteById(Resource):
         return jsonify(get_client_by_id(_id))
 
 
-@api.route('/client/<id>/')
+@api.route('/client/<_id>/')
 @api.doc(body=field_add)
 class ClienteUpdate(Resource):
     """
@@ -78,7 +78,7 @@ class ClienteUpdate(Resource):
         return jsonify(update_client(update_cliente, _id))
 
 
-@api.route('/cliente/<id>/')
+@api.route('/cliente/<_id>/')
 @api.doc(descripton="Elimina a aun cliente buscado por ID")
 class DeleteCliente(Resource):
     """

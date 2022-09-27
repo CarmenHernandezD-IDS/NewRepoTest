@@ -6,7 +6,7 @@ Autor: IDS.
 import sys
 from unittest import main, TestCase, mock
 sys.path.append(
-    r'app\controller')
+    r'.\app')
 from controller import cliente_api_controller # pylint: disable=wrong-import-position
 
 resp_espe = {
