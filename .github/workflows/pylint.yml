@@ -25,6 +25,6 @@ jobs:
         pylint . --recursive=y
     - name: Doing test
       working-directory:
-        "/home/runner/work/NewRepoTest/NewRepoTest/test"
+        "/home/runner/work/NewRepoTest/NewRepoTest/test/controller/"
       run: |
-        python '/controller/test_cliente_controller.py'
+        python 'test_cliente_controller.py'
