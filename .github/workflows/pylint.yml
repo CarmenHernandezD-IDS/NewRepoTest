@@ -25,4 +25,4 @@ jobs:
         pylint . --recursive=y
     - name: Doing test
       run: |
-        python '/home/runner/work/NewRepoTest/NewRepoTest/NewRepoTest-main/test/controller/test_cliente_controller.py'
+        python test_cliente_controller.py install
