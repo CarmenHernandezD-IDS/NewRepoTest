@@ -5,7 +5,7 @@ Autor: IDS.
 import configparser
 import logging
 
-class PropertiesReader():
+class PropertiesReader(): # pylint: disable=too-few-public-methods
     """
     Clase de lectura.
     """

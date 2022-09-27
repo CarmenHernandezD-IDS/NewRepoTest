@@ -6,8 +6,7 @@ from marshmallow import Schema, fields
 from peewee import AutoField, TextField, Model, SqliteDatabase
 from utils.python_properties_reader import PropertiesReader
 
-
-class Cliente(Model):
+class Cliente(Model): # pylint: disable=too-few-public-methods
     """
     Estructura de la tabla.
     """
@@ -16,7 +15,7 @@ class Cliente(Model):
     descripcion1 = TextField()
     descripcion2 = TextField()
 
-    class Meta:
+    class Meta: # pylint: disable=too-few-public-methods
         """
         Clase Meta
         """
@@ -24,7 +23,7 @@ class Cliente(Model):
         database = db
 
 
-class ClientSchema(Schema):
+class ClientSchema(Schema): # pylint: disable=too-few-public-methods
     """
     Clase ClientSchema
     """

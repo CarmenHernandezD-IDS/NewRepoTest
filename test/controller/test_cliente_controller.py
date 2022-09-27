@@ -6,8 +6,8 @@ Autor: IDS.
 import sys
 from unittest import main, TestCase, mock
 sys.path.append(
-    r'C:\Users\carmen.hernandez.d\Documents\Cliente con Crud\app\controller')
-from controller import cliente_api_controller
+    r'app\controller')
+from controller import cliente_api_controller # pylint: disable=wrong-import-position
 
 resp_espe = {
     "nombre": "Luis",
@@ -31,7 +31,7 @@ class MyTestCase(TestCase):
         }
         """
         mock_requests.return_value = mock_responde.text
-        lis_cli = cliente_api_controller.ListarClientes.get()
+        lis_cli = cliente_api_controller.ListarClientes.get() # pylint: disable=no-value-for-parameter
         self.assertEqual(lis_cli, mock_requests.return_value)
 
     @mock.patch("controller.cliente_api_controller.AgregarCliente.post")
@@ -46,7 +46,7 @@ class MyTestCase(TestCase):
         }
         """
         mock_requests.retunr_value = mock_responde.text
-        addcli = cliente_api_controller.AgregarCliente.post()
+        addcli = cliente_api_controller.AgregarCliente.post() # pylint: disable=no-value-for-parameter
         self.assertEqual(addcli, mock_requests.return_value)
 
     @mock.patch("controller.cliente_api_controller.ClienteById.get")
@@ -61,7 +61,7 @@ class MyTestCase(TestCase):
         }
         """
         mock_requests.return_value = mock_responde.text
-        byidcli = cliente_api_controller.ClienteById.get(1)
+        byidcli = cliente_api_controller.ClienteById.get(1) # pylint: disable=no-value-for-parameter
         self.assertEqual(byidcli, mock_requests.return_value)
 
     @mock.patch("controller.cliente_api_controller.ClienteUpdate.put")
@@ -76,7 +76,7 @@ class MyTestCase(TestCase):
         }
         """
         mock_requests.return_value = mock_responde.text
-        updacli = cliente_api_controller.ClienteUpdate.put(1)
+        updacli = cliente_api_controller.ClienteUpdate.put(1) # pylint: disable=no-value-for-parameter
         self.assertEqual(updacli, mock_requests.return_value)
 
     @mock.patch("controller.cliente_api_controller.DeleteCliente.delete")
@@ -91,7 +91,7 @@ class MyTestCase(TestCase):
         }
         """
         mock_requests.return_value = mock_responde.text
-        decli = cliente_api_controller.DeleteCliente.delete(1)
+        decli = cliente_api_controller.DeleteCliente.delete(1) # pylint: disable=no-value-for-parameter
         self.assertEqual(decli, mock_requests.return_value)
 
 if __name__ == '__main__':

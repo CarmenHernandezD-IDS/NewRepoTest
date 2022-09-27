@@ -15,6 +15,9 @@ class ServiceTest(TestCase):
     """
     @mock.patch("Service.ClienteService.add_client")
     def test_add(self, mock_requests):
+        """
+        Método test add
+        """
         mock_response = mock.MagicMock()
         mock_response.text = """
         {
@@ -23,7 +26,7 @@ class ServiceTest(TestCase):
         """
         mock_requests.return_value = mock_response.text
         add_c = cliente_service.add_client(mock_response.text)
-        self.assertEquals(add_c, mock_requests.return_value)
+        self.assertEquals(add_c, mock_requests.return_value) # pylint: disable=deprecated-method
         print(add_c)
         print(mock_requests.return_value)
 

@@ -7,7 +7,7 @@ from peewee import SqliteDatabase
 from utils.python_properties_reader import PropertiesReader
 from model.cliente import Cliente
 
-class Conectar():
+class Conectar(): # pylint: disable=too-few-public-methods
     """
     Conexión a la base de datos.
     """
