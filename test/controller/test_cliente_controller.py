@@ -2,8 +2,12 @@
 Descripción: Test cliente controller
 Autor: IDS.
 """
+
+import sys
 from unittest import main, TestCase, mock
-from app.controller import cliente_api_controller  # pylint: disable=wrong-import-position
+sys.path.append(
+    r'./home/runner/work/NewRepoTest/NewRepoTest/test/app')
+from controller import cliente_api_controller # pylint: disable=wrong-import-position
 
 resp_espe = {
     "nombre": "Luis",
